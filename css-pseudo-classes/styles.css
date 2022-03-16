@@ -1,0 +1,22 @@
+button {
+  font-family: sans-serif;
+  height: 30px;
+  width: 100px;
+  border: solid 2px grey;
+  color: black;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #d2d2d2;
+  color: black;
+}
