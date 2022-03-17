@@ -19,8 +19,6 @@ h2 {
 }
 
 button {
-  text-align: center;
-  float: right;
   background-color: #ec5c57;
   border-radius: 20px;
   border: white solid;
@@ -35,13 +33,11 @@ button {
 }
 
 .button {
-  text-align: center;
-  float: right;
+  text-align: right;
+  margin-right: 1px;
 }
 
-#email,
-#name,
-#hiring {
+input {
   width: 100%;
   padding: 10px;
   font-family: AtlasGrotesk, sans-serif;
@@ -66,7 +62,7 @@ button {
   color: black;
 }
 
-#engineers {
+select {
   background-color: #f3f3f3;
   width: 100%;
   padding-top: 10px;
