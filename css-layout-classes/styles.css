@@ -1,0 +1,42 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-link,
+.column-smash,
+.column-yoshi {
+  flex-basis: calc(100% / 3);
+}
+
+.column-kirby,
+.column-fox,
+.column-pikachu,
+.column-ness {
+  flex-basis: calc(100% / 4);
+}
+
+.column-dk,
+.column-mario {
+  flex-basis: calc(100% / 2);
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+p {
+  margin-top: 25px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
