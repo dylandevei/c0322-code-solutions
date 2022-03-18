@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -7,36 +12,40 @@
   display: flex;
 }
 
-.column-link,
-.column-smash,
-.column-yoshi {
-  flex-basis: calc(100% / 3);
+.column-full {
+  width: 100%;
 }
 
-.column-kirby,
-.column-fox,
-.column-pikachu,
-.column-ness {
-  flex-basis: calc(100% / 4);
+.column-one-third {
+  width: calc(100% / 3);
 }
 
-.column-dk,
-.column-mario {
-  flex-basis: calc(100% / 2);
+.column-two-thirds {
+  width: calc(200% / 3);
+}
+
+.column-fourth {
+  width: 25%;
 }
 
 img {
   width: 100%;
 }
 
-h1,
-h2 {
-  font-size: 18px;
+h1 {
+  font-size: 30px;
   font-family: sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 p {
-  margin-top: 25px;
-  font-size: 16px;
+  font-size: 17px;
   font-family: sans-serif;
+  font-weight: 500;
 }
