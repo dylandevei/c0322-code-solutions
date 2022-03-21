@@ -1,13 +1,8 @@
-var fullName;
-var isCool;
-var totalPets;
-var unknown;
+var fullName = 'Dylan De Vei';
+var isCool = true;
+var totalPets = 3;
+var unknown = null;
 var never;
-
-fullName = 'Dylan De Vei';
-isCool = true;
-totalPets = '3';
-unknown = null;
 
 console.log('value of fullName:', fullName);
 console.log('value of isCool?:', isCool);
