@@ -24,20 +24,22 @@ body {
 }
 
 .logo-img {
-  width: 70px;
-  height: 70px;
-  text-align: center;
-  padding-left: 120px;
+  width: 25%;
+  padding-left: 38%;
 }
 
 .text-align-center {
   text-align: center;
 }
 
-.justify-content-center {
-  justify-content: center;
-}
-
 .background-color-grey {
   background-color: #f7f8fa;
+}
+
+.padding-lr-100 {
+  padding: 0 100px;
+}
+
+.padding-lr-10 {
+  padding: 0 10px;
 }
