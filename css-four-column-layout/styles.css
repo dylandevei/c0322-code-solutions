@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-quarter {
+  width: 25%;
+}
+
+.phone-img {
+  width: 100%;
+}
+
+.logo-img {
+  width: 25%;
+  padding-left: 38%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.background-color-grey {
+  background-color: #f7f8fa;
+}
+
+.padding-lr-100 {
+  padding: 0 100px;
+}
+
+.padding-lr-10 {
+  padding: 0 10px;
+}
