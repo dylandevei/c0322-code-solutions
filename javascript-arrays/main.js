@@ -25,7 +25,7 @@ var students = [
 var numberOfStudents = students.length;
 console.log('There are ' + numberOfStudents + ' students in the class.');
 
-var lastIndex = students[3];
+var lastIndex = students[students.length - 1];
 var lastStudent = lastIndex;
 
 console.log('The last student in the array is', lastStudent + '.');
