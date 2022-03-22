@@ -126,10 +126,10 @@ img {
   top: 150px;
   right: 0;
   left: 100px;
-  width: 530px;
+  width: 620px;
   height: 400px;
   padding-left: 30px;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 .hero-image {
@@ -212,8 +212,8 @@ img {
   padding-bottom: 75px;
 }
 
-.padding-lr-360 {
-  padding: 0 360px;
+.padding-lr-400 {
+  padding: 0 400px;
 }
 
 .padding-l-50 {
@@ -244,8 +244,12 @@ img {
   text-align: center;
 }
 
+.font-20 {
+  font-size: 40px;
+}
+
 .font-14 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .font-12 {
@@ -254,10 +258,6 @@ img {
 
 .line-height {
   line-height: 35px;
-}
-
-.line-height-small {
-  line-height: 30px;
 }
 
 .line-height-smaller {
