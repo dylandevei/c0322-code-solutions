@@ -1,0 +1,43 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-quarter {
+  width: 25%;
+}
+
+.phone-img {
+  width: 100%;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding-left: 120px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.background-color-grey {
+  background-color: #f7f8fa;
+}
