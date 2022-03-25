@@ -6,6 +6,8 @@ function isUpperCased(word) {
     return false;
   }
 }
-// define function that checks if word is all uppercase
+// define function with one parameter (word)
+// function will check if word is all Uppercased
+// if word all uppercased equals the value of word ->
 // if word all uppercased equals value of word return true
 // if word does not equal all uppercase value return false
