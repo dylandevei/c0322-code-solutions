@@ -1,6 +1,6 @@
 /* exported initial */
 // define function named initial with single parameter(array)
-// function will return all values after the first array
+// function will return all values except last in array
 // tailing values will be pushed into new array
 // first index will be taken off of the array
 // for loop to iterate through first array and push new values to new array
