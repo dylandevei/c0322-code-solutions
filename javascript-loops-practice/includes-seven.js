@@ -5,7 +5,7 @@ function includesSeven(array) {
     if (array[i] === 7) {
       sevenArray.push(i);
     }
-  } if (sevenArray > 0) {
+  } if (sevenArray.length > 0) {
     return true;
   } else {
     return false;

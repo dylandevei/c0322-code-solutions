@@ -5,5 +5,6 @@ function filterOutNulls(values) {
     if (values[i] != null) {
       newArray.push(values[i]);
     }
-  } return newArray;
+  }
+  return newArray;
 }

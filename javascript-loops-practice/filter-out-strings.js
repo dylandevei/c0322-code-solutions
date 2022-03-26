@@ -7,5 +7,6 @@ function filterOutStrings(values) {
     } else {
       newArray.push(values[i]);
     }
-  } return newArray;
+  }
+  return newArray;
 }

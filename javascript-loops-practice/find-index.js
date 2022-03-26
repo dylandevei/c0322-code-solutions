@@ -5,7 +5,7 @@ function findIndex(array, value) {
     if (array[i] === value) {
       return i;
     }
-  } if (value > array.length) {
+  } if (array[i] !== value) {
     return -1;
   }
 }

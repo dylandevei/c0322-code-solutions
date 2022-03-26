@@ -4,5 +4,6 @@ function addSuffixToAll(words, suffix) {
   for (var i = 0; i < words.length; i++) {
     var newWord = words[i] + suffix;
     newArray.push(newWord);
-  } return newArray;
+  }
+  return newArray;
 }
