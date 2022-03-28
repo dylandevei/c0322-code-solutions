@@ -13,5 +13,6 @@ function compact(array) {
     if (Boolean(array[i]) === true) {
       newArray.push(array[i]);
     }
-  } return newArray;
+  }
+  return newArray;
 }
