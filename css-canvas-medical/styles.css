@@ -140,6 +140,31 @@ img {
   filter: brightness(80%);
 }
 
+.product-image {
+  padding: 0 70px;
+  padding-top: 100px;
+  padding-bottom: 75px;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  filter: brightness(65%);
+}
+
+.product-1-section {
+  padding: 100px 40px;
+}
+
+.absolute-section-product {
+  position: absolute;
+  top: 310px;
+  right: 0;
+  left: 100px;
+  width: 620px;
+  height: 400px;
+  padding-left: 30px;
+  line-height: 1;
+}
+
 .blue-contact-button {
   background-color: #294464;
   color: white;
