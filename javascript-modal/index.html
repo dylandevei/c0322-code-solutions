@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <title>JavaScript Modal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -9,19 +8,27 @@
   <div class="container">
     <div class="row">
       <div class="column-full">
-        <button class="open-modal-button">Open Modal</button>
+        <div>
+          <button class="modal-button">Open Modal</button>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="column-full">
-        <div class="popup-window">
-          <section class="justify-content-center">
-            <h2>Want to take a survey?</h2>
-            <button class="popup-button">no</button>
-          </section>
+        <div class="popup">
+          <div class="popup-header">
+            <h2>Would you like to take a survey?</h2>
+          </div>
+          <div class="popup-body">
+            <button class="no-button">no</button>
+          </div>
         </div>
       </div>
     </div>
+    <div class="overlay">
+
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>

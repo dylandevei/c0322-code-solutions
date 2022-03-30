@@ -1,9 +1,18 @@
-// var $modalButton = document.querySelector('.open-modal-button');
-// var $popUp = document.querySelector('.popup-window');
-// var $noButton = document.querySelector('.popup-button');
 
-// $modalButton.addEventListener('click', handleClick);
+var $modal = document.querySelector('.modal-button');
+var $popUp = document.querySelector('.popup');
+var $noButton = document.querySelector('.no-button');
+var $overlay = document.querySelector('.overlay');
 
-// function handleClick(event) {
-//   $popUp.className = 'popup-window.shown';
-// }
+$modal.addEventListener('click', handleClick);
+$noButton.addEventListener('click', handleClick2);
+
+function handleClick(event) {
+  $popUp.className = 'popup-display';
+  $overlay.className = 'overlay-on';
+}
+
+function handleClick2(event) {
+  $popUp.className = 'popup';
+  $overlay.className = 'overlay';
+}
