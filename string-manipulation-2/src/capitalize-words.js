@@ -10,8 +10,9 @@
 function capitalizeWords(string) {
   var splitWords = string.toLowerCase();
   splitWords = string.split(' ');
+
   for (var i = 0; i < splitWords.length; i++) {
-    splitWords[i] = splitWords[i][0].toUpperCase() + splitWords[i].substr(1);
+    splitWords[i] = splitWords[i][0].toUpperCase() + splitWords[i].substring(1).toLowerCase();
   }
   return splitWords.join(' ');
 }
