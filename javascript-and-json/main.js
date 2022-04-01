@@ -24,7 +24,7 @@ var jsonStringify = JSON.stringify(books);
 console.log('JSON.Stringify:', jsonStringify);
 console.log('type of JSON.stringify:', typeof (jsonStringify));
 
-var student = '[{ "id": 123452}, {"name": "Dylan De Vei"} ]';
+var student = '[{ "id": 123452, "name": "Dylan De Vei"} ]';
 console.log('student:', student);
 console.log('type of student:', typeof (student));
 
