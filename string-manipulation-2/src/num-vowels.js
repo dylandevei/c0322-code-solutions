@@ -4,12 +4,12 @@
 // return vowel count
 
 function numVowels(string) {
-  var vowelCount = null;
-  var vowelSplit = string.split('');
-  for (var i = 0; i < string.length; i++) {
-    if (vowelSplit[i] === 'a' || vowelSplit[i] === 'e' || vowelSplit[i] === 'i' || vowelSplit[i] === 'o' || vowelSplit[i] === 'u') {
+  var vowelCount = 0;
+  var newString = string.toLowerCase();
+  newString = newString.split('');
+  for (var i = 0; i < newString.length; i++) {
+    if (newString[i] === 'a' || newString[i] === 'e' || newString[i] === 'i' || newString[i] === 'o' || newString[i] === 'u') {
       vowelCount++;
-
     }
   } return vowelCount;
 }
