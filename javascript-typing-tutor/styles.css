@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.tutor-box {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.align-items {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  white-space: pre;
+  font-family: "Permanent Marker", cursive;
+  font-size: 40px;
+}
+
+.underline {
+  border-bottom: 5px solid black;
+}
+
+.underline-incorrect {
+  border-bottom: 5px solid red;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
