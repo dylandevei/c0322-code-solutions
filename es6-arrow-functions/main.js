@@ -21,6 +21,7 @@ const jokester = {
     const $phrase = document.createElement('h4');
     $phrase.textContent = phrase;
     $phrase.className = 'fade-in text-center';
+
     return $phrase;
   },
   appendJokePhrase: $phrase => {
