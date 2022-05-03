@@ -13,11 +13,10 @@
   author: 'Inio Asano',
   libraryID: 3353
 };
-const title = book1.title;
-const author = book1.author;
-const libraryID = book1.libraryID;
 
-console.log(`The title of the book is ${title}, the author is ${author}, and the library id is ${libraryID}.`);
+const { title: book1Title, author: book1Author, libraryID: book1LibraryID } = book1;
+
+console.log(`The title of the book is ${book1Title}, the author is ${book1Author}, and the library id is ${book1LibraryID}.`);
 
 const book2 = {
   title: 'Les Fleurs du mal',
@@ -25,11 +24,9 @@ const book2 = {
   libraryID: 2345
 };
 
-const otherTitle = book2.title;
-const otherAuthor = book2.author;
-const otherLibraryID = book2.libraryID;
+const { title: book2Title, author: book2Author, libraryID: book2LibraryID } = book2;
 
-console.log(`The title of the book is ${otherTitle}, the author is ${otherAuthor}, and the library id is ${otherLibraryID}.`);
+console.log(`The title of the book is ${book2Title}, the author is ${book2Author}, and the library id is ${book2LibraryID}.`);
 
 const library = [
       {
