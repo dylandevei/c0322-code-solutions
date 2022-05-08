@@ -1,18 +1,18 @@
 /* exported isPalindromic */
 
-function isPalindromic(string) {
-  var testString = string.split(' ').join('');
-  var newString = [];
-  for (var i = testString.length - 1; i >= 0; i--) {
+const isPalindromic = string => {
+  const testString = string.split(' ').join('');
+  const newString = [];
+  for (let i = testString.length - 1; i >= 0; i--) {
     newString.push(testString[i]);
   }
-  var reverseWord = newString.join('');
+  const reverseWord = newString.join('');
   if (reverseWord === testString) {
     return true;
   } else {
     return false;
   }
-}
+};
 
 // define function with parameter string
 // make parameter string a string without any spaces
