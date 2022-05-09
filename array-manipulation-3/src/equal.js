@@ -1,16 +1,16 @@
 /* exported equal */
 
-function equal(first, second) {
+const equal = (first, second) => {
   if (first.length !== second.length) {
     return false;
   }
-  for (var i = 0; i < first.length; i++) {
+  for (let i = 0; i < first.length; i++) {
     if (first[i] !== second[i]) {
       return false;
     }
   }
   return true;
-}
+};
 
 // first check length of first array against the second array
 // if the lengths don't match, return false

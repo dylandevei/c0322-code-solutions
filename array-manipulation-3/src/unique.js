@@ -1,15 +1,15 @@
 /* exported unique */
 
-function unique(array) {
-  var solution = [];
+const unique = array => {
+  const solution = [];
 
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (!solution.includes(array[i])) {
       solution.push(array[i]);
     }
   }
   return solution;
-}
+};
 
 // create empty array
 // loop through parameter array and check if index is in solution array

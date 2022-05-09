@@ -1,20 +1,20 @@
 /* exported difference */
 
-function difference(first, second) {
-  var solution = [];
+const difference = (first, second) => {
+  const solution = [];
 
-  for (var i = 0; i < first.length; i++) {
+  for (let i = 0; i < first.length; i++) {
     if (!second.includes(first[i])) {
       solution.push(first[i]);
     }
   }
-  for (var k = 0; k < second.length; k++) {
+  for (let k = 0; k < second.length; k++) {
     if (!first.includes(second[k])) {
       solution.push(second[k]);
     }
   }
   return solution;
-}
+};
 
 // create empty array
 // loop through first array and see if second array includes first index, push to solution array if so

@@ -1,20 +1,20 @@
 /* exported union */
 
-function union(first, second) {
-  var solution = [];
+const union = (first, second) => {
+  const solution = [];
 
-  for (var i = 0; i < first.length; i++) {
+  for (let i = 0; i < first.length; i++) {
     if (!solution.includes(first[i])) {
       solution.push(first[i]);
     }
   }
-  for (var k = 0; k < second.length; k++) {
+  for (let k = 0; k < second.length; k++) {
     if (!solution.includes(second[k])) {
       solution.push(second[k]);
     }
   }
   return solution;
-}
+};
 
 // create new solution array
 // iterate through first array and check if solution array includes indexes, if not push to solution array
