@@ -1,2 +1,2 @@
-select count("countryID"*) as "totalCountries"
-  from "cities";
+select count(*) as "total DVDs"
+  from "inventory";
