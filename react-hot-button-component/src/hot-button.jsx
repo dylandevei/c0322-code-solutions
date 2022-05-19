@@ -1,9 +1,9 @@
 import React from 'react';
-let buttonClicks = 0;
+
 class HotButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: buttonClicks };
+    this.state = { clicks: 0 };
 
     this.handleClick =
       this.handleClick.bind(this);
@@ -11,42 +11,42 @@ class HotButton extends React.Component {
 
   handleClick() {
     this.setState(prevState => ({
-      isClicked: buttonClicks++
+      clicks: this.state.clicks + 1
     }));
   }
 
   render() {
-    if (buttonClicks <= 3) {
+    if (this.state.clicks <= 3) {
       return (
       <button onClick={this.handleClick} className='hot-button'>
         Hot Button</button>
       );
-    } else if (buttonClicks <= 6) {
+    } else if (this.state.clicks <= 6) {
       return (
       <button onClick={this.handleClick} className='hot-button cold'>
         Hot Button</button>
       );
-    } else if (buttonClicks <= 9) {
+    } else if (this.state.clicks <= 9) {
       return (
       <button onClick={this.handleClick} className='hot-button cool'>
         Hot Button</button>
       );
-    } else if (buttonClicks <= 12) {
+    } else if (this.state.clicks <= 12) {
       return (
       <button onClick={this.handleClick} className='hot-button tepid'>
         Hot Button</button>
       );
-    } else if (buttonClicks <= 15) {
+    } else if (this.state.clicks <= 15) {
       return (
       <button onClick={this.handleClick} className='hot-button warm'>
         Hot Button</button>
       );
-    } else if (buttonClicks <= 18) {
+    } else if (this.state.clicks <= 18) {
       return (
         <button onClick={this.handleClick} className='hot-button hot'>
           Hot Button</button>
       );
-    } else if (buttonClicks < 21) {
+    } else if (this.state.clicks < 21) {
       return (
         <button onClick={this.handleClick} className='hot-button thats'>
           Thats Hot Button</button>
