@@ -18,14 +18,14 @@ class ToggleSwitch extends React.Component {
   render() {
     if (!this.state.isToggleOn) {
       return (
-      <div className='button-on'>
+      <div className='button-off'>
         <button className='slider-off' onClick={this.handleClick}></button>
         <div className='text'>OFF</div>
       </div>
       );
     } else {
       return (
-        <div className='button-off'>
+        <div className='button-on'>
           <button className='slider-on' onClick={this.handleClick}></button>
           <div className='text'>ON</div>
         </div>
