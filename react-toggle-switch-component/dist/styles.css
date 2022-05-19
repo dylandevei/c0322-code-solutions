@@ -1,0 +1,47 @@
+.button-on {
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #3cb99c;
+  border: 3px solid black;
+}
+
+.button-off {
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: lightgrey;
+  border: 3px solid black;
+}
+
+.slider-off {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  transition: 0.6s ease;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.slider-on {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 8px;
+  left: 70px;
+  transition: 0.6s ease;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.text {
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  left: 150px;
+  top: 15px;
+}
