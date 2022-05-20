@@ -16,6 +16,27 @@ class AppDrawer extends React.Component {
   }
 
   render() {
+    return (
+      <div>
+      <header>
+        <div className='navbar'>
+          <div>
+              <button><i className="fa-solid fa-bars"></i></button>
+          </div>
+        </div>
+      </header>
+        <div className='container'>
+      <div className='row'>
+        <div className='column-full'>
+          <div className='img'>
+              <img src="https://pbs.twimg.com/media/FRXaiWUWUAIMXEO.jpg:large" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+
+    );
   }
 }
 
