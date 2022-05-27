@@ -1,0 +1,55 @@
+User can sign up.
+
+-Upon visiting the website, React Component AuthPage is rendered containing AuthForm React Element on #sign-in hash location
+-form will ask for credentials from user , if user has not signed up yet, user can click either Sign Up button located
+  on React element (navbar) or Register Now(alternativeActionHref) link to be brought to Auth From react element with hashchange to #sign-up hashlocation
+-registration form, clicking either will change the state of the auth form and hashchange to #sign-up location
+-if user completes both inputs and hits submit, handlesubmit method sends a POST request is sent to the index.js located
+  within the server directory
+  -if the user does not complete either the username or password input, the server throws a 400 error message
+  -if both inputs are filled out correctly (else), hash method of the argon2 object will hash the users password
+  -next, the post method queries the database and inserts the 'username' and 'hashedPassword' into the database
+  -THEN, the result of the SQL query is assigned to a user variable from the array literal (first and only element)
+    (destructuring assignment)
+  -server will send a 201 status message and json will parse the return of that function.
+    -will catch any errors otherwise.
+    -hash location changes from '#sign-up' to '#sign-in' and sign in page is rendered when path is 'sign-in'
+
+
+User can sign in.
+
+  -after user has registered or has visted site again, React Element AuthForm is rendered back to login state
+  if user signs in with either wrong username or password, server throws error 401, 'invalid login'
+    -when user signs in with correct credentials, a post request is sent to index.js file within server directory that
+    will query the database for the userId and hashedPassword from users table
+    -THEN the user element from the array literal is destructured from the rows prop of the result object and assigned
+       to const variable user
+      -if user does not exist, server throws a 401 error and 'invalid login'
+    -ELSE, userID and hashedPassword properties of user object are destructed and assigned to const variables userID and hashedPassword
+ -if users credentials dont match, 401 error is thrown and 'invalid login'
+  -argon verifies credentials and assigns a token for verification of sign in to verify user is verified access to website
+   based of their credentials being the same as database username and hashedPassword
+-users token will grant them access to homepage of react application(rick roll gif) and hash will change to '#' and render
+  homepage with gif
+  -if User is not null , React Component Nav Bar will change its state to have sign out button (which can handle and OnClick event)
+    -otherwise state will hash location will remain on sign in page (brings back to first step of this^^)
+
+
+User can stay signed in (even if they refresh the page).
+
+If user reloads pages after signing then then user will still have token from authorization through the componentDidMount() method
+ of the app, isAuthorizing: false,
+  which rerenders # page(rick roll gif) each refresh with React element Nav Bar rendered to signout since user is NOT null
+  -token will be accessed via setItem() method of localstorage property of window object and set state to user object.
+  -if user does not have authorization(no token) and isAuthorizing: is still set to true, app will hashlocation back
+    to #sign-in via hashchange event and render AuthPage again
+as long as user remains logged in, token will be attached to user, and homepage will rerender to gif each time as isAuthorizing remains false
+
+
+User can sign out.
+
+  -Upon the user being on hash location of rick roll gif (#) or homepage, React element Navbar will render the signout button since user is not null
+  -upon clicking the signout button, onClick even will trigger the handleSignOut() method of the App React Component
+    -this will set the user to null and also strip the user of their access token, which will change the state back to hash location #sign-in
+    and also set isAuthorizing property of this.state to true.
+  -finally the AuthPage will re-render asking user to sign in once more.
