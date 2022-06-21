@@ -4,7 +4,7 @@ var $leftArrow = document.querySelector('#left');
 var $img = document.querySelector('img');
 var $circles = document.querySelectorAll('.dot');
 var intId = setInterval(forwardClick, 3000);
-var index = 0;
+var index = null;
 
 for (var i = 0; i < $circles.length; i++) {
   $circles[i].addEventListener('click', dotClick);
@@ -36,19 +36,19 @@ function switchDots() {
 function forwardClick() {
   clearInterval(intId);
   intId = setInterval(forwardClick, 3000);
-  switchImage();
   index++;
   if (index > imageArray.length - 1) {
     index = 0;
   }
+  switchImage();
 }
 
 function backClick() {
   clearInterval(intId);
   intId = setInterval(forwardClick, 3000);
-  switchImage();
   index--;
   if (index < 0) {
     index = imageArray.length - 1;
   }
+  switchImage();
 }
