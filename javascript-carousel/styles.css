@@ -1,0 +1,60 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-box {
+  margin-top: 20vh;
+  padding: 20px;
+  border: 10px double white;
+  background-color: #0075be;
+}
+
+.row {
+  display: flex;
+}
+
+.column-third {
+  width: calc(100% / 3);
+}
+
+.pokemon-background {
+  padding-left: 250px;
+  height: 100px;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  max-width: 250px;
+  height: 250px;
+}
+
+.select-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.left-arrow {
+  color: #fc0;
+  padding-top: 120px;
+  font-size: 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right-arrow {
+  padding-top: 120px;
+  color: #fc0;
+  font-size: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+i {
+  padding: 0 5px;
+  color: #fc0;
+}
