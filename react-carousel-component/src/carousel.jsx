@@ -13,7 +13,7 @@ export default class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    this.intId = setInterval(this.forwardClick(), 3000);
+    this.intId = setInterval(() => this.forwardClick(), 3000);
   }
 
   dotClick(event) {
