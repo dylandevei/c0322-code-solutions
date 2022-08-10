@@ -1,0 +1,45 @@
+ul {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.accordion-div {
+  display: flex;
+  justify-content: center;
+}
+
+.accordion-header {
+  border: 0.2rem solid black;
+  background-color: #dddd;
+  margin: 0.1rem;
+  padding-left: 1rem;
+  width: 40rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.accordion-bio {
+  border: 0.2rem solid black;
+  background-color: white;
+  margin: 0.1rem;
+  padding-left: 1rem;
+  width: 40rem;
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.accordion-bio > img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.accordion-text {
+  background-color: white;
+  font-size: 1.2rem;
+  cursor: default;
+}
