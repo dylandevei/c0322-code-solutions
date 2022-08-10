@@ -1,79 +1,86 @@
 import React from 'react';
 
-class AppDrawer extends React.Component {
+export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { sidebarOpen: false };
+    this.state = {
+      index: null
+    };
 
-    this.handleClick =
-      this.handleClick.bind(this);
+    this.backClick = this.backClick.bind(this);
+    this.forwardClick = this.forwardClick.bind(this);
+    this.dotClick = this.dotClick.bind(this);
   }
 
-  handleClick() {
-    this.setState(prevState => ({
-      sidebarOpen: !this.state.sidebarOpen
-    }));
+  componentDidMount() {
+    this.intId = setInterval(this.forwardClick(), 3000);
+  }
+
+  dotClick(event) {
+    clearInterval(this.intId);
+    this.intId = setInterval(() => this.forwardClick(), 3000);
+    const id = parseInt(event.target.id);
+    this.setState({
+      index: id
+    });
+  }
+
+  forwardClick() {
+    clearInterval(this.intId);
+    this.intId = setInterval(() => this.forwardClick(), 3000);
+    if (this.state.index > this.props.images.length - 1) {
+      this.setState({
+        index: 1
+      });
+    } else {
+      this.setState(prevState => ({
+        index: prevState.index + 1
+      }));
+    }
+  }
+
+  backClick() {
+    clearInterval(this.intId);
+    this.intId = setInterval(() => this.forwardClick(), 3000);
+    if (this.state.index === 1) {
+      this.setState({
+        index: this.props.images.length
+      });
+    } else {
+      this.setState(prevState => ({
+        index: this.state.index - 1
+      }));
+    }
   }
 
   render() {
-    if (!this.state.sidebarOpen) {
-      return (
-        <div>
-          <div className='sidebar-off'>
-            <div className='sidebar-text'>
-              <h1>Settings</h1>
-              <ul onClick={this.handleClick}>
-                <h4>About Us</h4>
-                <h4>Contact Us</h4>
-                <h4>Our Story</h4>
-              </ul>
+    const images = this.props.images;
+    return (
+      <div className="container carousel-box">
+        <div className="row">
+          <div className='column-third'>
+            <i className="fas fa-chevron-left left-arrow" onClick={this.backClick} id="left"></i>
+          </div>
+          <div className="column-third">
+            {images.map(image => {
+              return (this.state.index === image.id && (
+                <img key={image.id} src={image.url} alt={image.id} />
+              ));
+            })}
+            <div className='select-buttons'>
+              {images.map(image => {
+                return (this.state.index === image.id
+                  ? <i className="fas fa-circle" id={image.id} key={image.id} onClick={this.dotClick}></i>
+                  : <i className="far fa-circle" id={image.id} key={image.id} onClick={this.dotClick}></i>
+                );
+              })}
             </div>
           </div>
-          <header>
-            <button onClick={this.handleClick}><i className="fa-solid fa-bars"></i></button>
-          </header>
-          <div className='container'>
-            <div className='row'>
-              <div className='column-full'>
-                <div className='img'>
-                  <img src="https://pbs.twimg.com/media/FRXaiWUWUAIMXEO.jpg:large" alt="kirby and friends" />
-                </div>
-              </div>
-            </div>
+          <div className="column-third">
+            <i className="fas fa-chevron-right right-arrow" onClick={this.forwardClick} id="right"></i>
           </div>
-          <div className='overlay' onClick={this.handleClick}></div>
         </div>
-      );
-    } else {
-      return (
-        <div>
-          <div className='sidebar-on'>
-            <div className='sidebar-text'>
-              <h1>Settings</h1>
-              <ul onClick={this.handleClick}>
-                <h4>About Us</h4>
-                <h4>Contact Us</h4>
-                <h4>Our Story</h4>
-              </ul>
-            </div>
-          </div>
-          <header>
-            <button><i className="fa-solid fa-bars"></i></button>
-          </header>
-          <div className='container'>
-            <div className='row'>
-              <div className='column-full'>
-                <div className='img'>
-                  <img src="https://pbs.twimg.com/media/FRXaiWUWUAIMXEO.jpg:large" alt="kirby and friends" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='overlay-on' onClick={this.handleClick}></div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }
-
-export default AppDrawer;
